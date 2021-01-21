@@ -1,9 +1,13 @@
-const Before = require("./Before");
 const axios = require("axios");
+const Before = require("./Before");
 
-const origin = { ...axios };
+function Axios(cnf, deps, axiosError) {
+  const { loggers, retrys, retryTimes, retryIntervalMS, conf } = cnf;
+  const {
+    U: { sleep },
+    logger
+  } = deps;
 
-function Axios({ loggers, retrys, retryTimes = 3, retryIntervalMS = 10 * 1000, conf = {} }, { U: { sleep }, logger }, axiosError) {
   const retryAble = (fn, times, interval) => {
     const exec = async (args, no) => {
       try {
@@ -24,7 +28,7 @@ function Axios({ loggers, retrys, retryTimes = 3, retryIntervalMS = 10 * 1000, c
 
   const instance = axios.create(conf);
 
-  if (methods) {
+  if (loggers) {
     for (const x of loggers) {
       instance[x] = logger.logger(
         instance[x],
@@ -33,6 +37,7 @@ function Axios({ loggers, retrys, retryTimes = 3, retryIntervalMS = 10 * 1000, c
         res => res.data,
         axiosError
       );
+    }
   }
 
   if (retrys) {
@@ -41,7 +46,7 @@ function Axios({ loggers, retrys, retryTimes = 3, retryIntervalMS = 10 * 1000, c
     }
   }
 
-  instance.origin = origin;
+  instance.origin = { ...axios };
 
   return instance;
 }
