@@ -1,6 +1,6 @@
 {
   "name": "@domain.js/axios",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "domain.js axios plugin",
   "main": "index.js",
   "scripts": {
@@ -15,18 +15,13 @@
   "author": "Redstone Zhao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/domain-js/aes/issues"
+    "url": "https://github.com/domain-js/axios/issues"
   },
-  "homepage": "https://github.com/domain-js/aes#readme",
+  "homepage": "https://github.com/domain-js/axios#readme",
   "dependencies": {
     "axios": "^0.21.1"
   },
   "devDependencies": {
-    "eslint": "^7.18.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
     "jest": "^24.9.0"
   }
 }
