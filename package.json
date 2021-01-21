@@ -1,0 +1,27 @@
+{
+  "name": "@domain.js/axios",
+  "version": "0.1.0",
+  "description": "domain.js axios plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jest ./__test__ --coverage",
+    "test:watch": "export NODE_ENV=test && jest ./__test__ --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/domain-js/axios.git"
+  },
+  "keywords": ["axios", "domain.js"],
+  "author": "Redstone Zhao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/domain-js/aes/issues"
+  },
+  "homepage": "https://github.com/domain-js/aes#readme",
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
