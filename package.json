@@ -1,6 +1,6 @@
 {
   "name": "@domain.js/axios",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "domain.js axios plugin",
   "main": "index.js",
   "scripts": {
@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/domain-js/axios.git"
   },
-  "keywords": [
-    "axios",
-    "domain.js"
-  ],
+  "keywords": ["axios", "domain.js"],
   "author": "Redstone Zhao",
   "license": "MIT",
   "bugs": {
