@@ -3,7 +3,9 @@ const Before = require("./Before");
 
 function Axios(cnf, deps, axiosError) {
   if (!cnf.axios) cnf.axios = {};
-  const { loggers, retrys, retryTimes, retryIntervalMS, conf } = cnf.axios;
+  const {
+    axios: { loggers, retrys, retryTimes, retryIntervalMS, conf }
+  } = cnf.axios;
   const {
     U: { sleep },
     logger
@@ -32,13 +34,7 @@ function Axios(cnf, deps, axiosError) {
   if (loggers) {
     for (const x of loggers) {
       console.log(`axios.${x} logger.logger`);
-      instance[x] = logger.logger(
-        instance[x],
-        `axios.${x}`,
-        true,
-        res => res.data,
-        axiosError
-      );
+      instance[x] = logger.logger(instance[x], `axios.${x}`, true, res => res.data, axiosError);
     }
   }
 

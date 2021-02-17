@@ -1,6 +1,6 @@
 {
   "name": "@domain.js/axios",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "domain.js axios plugin",
   "main": "index.js",
   "scripts": {
