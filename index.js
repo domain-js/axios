@@ -3,9 +3,7 @@ const Before = require("./Before");
 
 function Axios(cnf, deps, axiosError) {
   if (!cnf.axios) cnf.axios = {};
-  const {
-    axios: { loggers, retrys, retryTimes, retryIntervalMS, conf }
-  } = cnf.axios;
+  const { loggers, retrys, retryTimes, retryIntervalMS, conf } = cnf.axios;
   const {
     U: { sleep },
     logger
