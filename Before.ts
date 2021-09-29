@@ -1,4 +1,4 @@
-module.exports = (cnf, deps) => {
+export default (cnf, deps) => {
   /**
    * 请求错误的处理函数，返回错误[code, message]
    * @memberof U
@@ -7,7 +7,7 @@ module.exports = (cnf, deps) => {
    *
    * @return {Array<string|number, string>} [code, message]
    */
-  const axiosError = e => {
+  const axiosError = (e) => {
     if (!e.response) return ["no-response", e.message];
     const r = e.response;
     if (!r.data) return [r.status, r.statusText];
